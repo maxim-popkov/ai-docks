@@ -8,6 +8,10 @@
 /archives/*
 /toDocker/env-deps/*
 
+!/archives/.gitkeep
+!/toDocker/env-deps/.gitkeep
+
+
 # OS generated files #
 ######################
 .DS_Store
