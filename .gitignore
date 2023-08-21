@@ -5,8 +5,8 @@
 *.whl
 
 # Ignore specific directories and their contents
-/archives/
-/toDocker/env-deps/
+/archives/*
+/toDocker/env-deps/*
 
 # OS generated files #
 ######################
