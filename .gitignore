@@ -1,0 +1,64 @@
+# Ignore tar gz files and their split parts
+*.tar.gz*
+
+# Ignore whl files
+*.whl
+
+# Ignore specific directories and their contents
+/archives/
+/toDocker/env-deps/
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE and editor generated files #
+##################################
+# Visual Studio Code
+.vscode/
+# PyCharm
+.idea/
+# Eclipse
+.classpath
+.project
+.settings/
+# Sublime Text
+*.sublime-workspace
+
+# Python #
+##########
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+*.egg
+*.venv/
+*.virtualenv/
+*.log
+*.pot
+*.pyc
+
+# Node.js #
+###########
+node_modules/
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# Others #
+##########
+*.bak
+*.swp
+*.swo
+*.tmp
+*.temp
+*.save

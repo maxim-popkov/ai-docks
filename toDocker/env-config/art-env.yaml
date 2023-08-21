@@ -1,0 +1,14 @@
+name: art-env
+channels:
+  - pytorch
+  - defaults
+  - anaconda
+dependencies:
+  - python=3.10
+  - pip=23.0
+  - ipython
+  - ipykernel
+  - jupyter
+  - numpy=1.23
+  - tk
+

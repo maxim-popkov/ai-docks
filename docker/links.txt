@@ -1,0 +1,5 @@
+# https://download.pytorch.org/whl/cu118/
+https://download.pytorch.org/whl/cu118/torch-2.0.1%2Bcu118-cp310-cp310-linux_x86_64.whl
+https://download.pytorch.org/whl/cu118/torchvision-0.15.2%2Bcu118-cp310-cp310-linux_x86_64.whl
+
+# https://github.com/seruva19/flash-attn-wheels/raw/main/torch2.0.0%2Bcu118/flash_attn-1.0.1-cp310-cp310-linux_x86_64.whl
