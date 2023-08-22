@@ -14,11 +14,12 @@ BASE_URL="https://raw.githubusercontent.com/maxim-popkov/ai-docks/main/toDocker/
 FILE_URL="$BASE_URL/$SCRIPT_NAME"
 
 # Скачиваем файл
-curl -o $SCRIPT_NAME $FILE_URL
+curl -f -o $SCRIPT_NAME $FILE_URL
 
 # Проверяем успешность скачивания
 if [ $? -ne 0 ]; then
     echo "Error downloading the script. Please check the script name and try again."
+    rm -f $SCRIPT_NAME  # Удаляем пустой или неполный файл
     exit 2
 fi
 
