@@ -55,14 +55,10 @@ RUN echo ". ${MINICONDA_HOME}/etc/profile.d/conda.sh" >> ${HOME_DIR}/.bashrc && 
     ${MINICONDA_HOME}/bin/conda clean -afy && \
     conda update conda && \
     mamba env create --name ${CONDA_ART_ENV} -f ${HOME_DIR}/install/env-config/art-env.yaml && \
-    echo "conda activate ${CONDA_ART_ENV}" >> ${HOME_DIR}/.bashrc && \
-    conda init bash
+    conda init bash && \
+    echo "conda activate ${CONDA_ART_ENV}" >> ${HOME_DIR}/.bashrc
 
 ENV PATH ${MINICONDA_HOME}/envs/${CONDA_ART_ENV}/bin:$PATH
-
-
-# RUN echo "conda activate art-env" >> ${HOME_DIR}/.bashrc && \
-#     conda init bash
 
 # Copy necessary files
 COPY ../toDocker/env-deps ${HOME_DIR}/install/env-deps
@@ -82,72 +78,7 @@ RUN apt-get install -y python3-tk && \
     rm -rf ${HOME_DIR}/install/env-deps/
 
 EXPOSE 1991
-
 CMD [ "/bin/bash" ]
-
-
-######## old
-
-# FROM nvidia/cuda:11.4.3-base-ubuntu20.04
-# ENV DEBIAN_FRONTEND noninteractive
-# ENV HOME_DIR /home/popkov-mi
-# ENV PATH ${HOME_DIR}/miniconda3/bin:$PATH
-
-
-# # set bash as current shell
-# SHELL ["/bin/bash", "-c"]
-# RUN chsh -s /bin/bash && \
-#     mkdir -p ${HOME_DIR}/install/ && \
-#     mkdir -p ${HOME_DIR}/sd-app/{v1,v2} && \
-#     mkdir -p ${HOME_DIR}/kand-app/{v1,v2} && \
-#     mkdir -p ${HOME_DIR}/sd-app/{cn15-models,cn21-models,cn-annotator,sd15-models,sd21-models,vae} && \
-#     touch ~/.no_auto_tmux
-
-# COPY ../toDocker/env-config  ${HOME_DIR}/install/env-config
-# COPY ../toDocker/pip-reqs ${HOME_DIR}/install/pip-reqs
-
-# # install
-# RUN apt-get update && \
-#     apt-get install -y bzip2 ca-certificates libxext6 libsm6 libxrender1 && \
-#     apt-get install -y libgoogle-perftools-dev && \
-#     apt-get install -y libarchive13 && \
-#     apt-get install -y libgl1 libglib2.0-0 wget curl vim git git-lfs && \ 
-#     # python3-pip python-is-python3 && \
-#     apt-get install -y --no-install-recommends aria2 && \
-#     apt-get clean && \
-#     # install anaconda
-#     wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-py310_23.3.1-0-Linux-x86_64.sh -O ${HOME_DIR}/miniconda.sh && \
-#     /bin/bash ${HOME_DIR}/miniconda.sh -b -p ${HOME_DIR}/miniconda3 && \
-#     rm ${HOME_DIR}/miniconda.sh && \
-#     ln -s ${HOME_DIR}/miniconda3/etc/profile.d/conda.sh /etc/profile.d/conda.sh && \
-#     echo ". ${HOME_DIR}/miniconda3/etc/profile.d/conda.sh" >> ~/.bashrc && \
-#     find ${HOME_DIR}/miniconda3/ -follow -type f -name '*.a' -delete && \
-#     find ${HOME_DIR}/miniconda3/ -follow -type f -name '*.js.map' -delete && \
-#     ${HOME_DIR}/miniconda3/bin/conda install -y -c conda-forge mamba && \
-#     ${HOME_DIR}/miniconda3/bin/conda clean -afy && \
-#     # conda create env
-#     conda update conda && \
-#     mamba env create --name art-env -f ${HOME_DIR}/install/env-config/art-env.yaml && \
-#     echo "conda activate art-env" >> ~/.bashrc && \
-#     conda init bash
-
-# ENV PATH ${HOME_DIR}/miniconda3/envs/art-env/bin:$PATH
-# ENV CONDA_DEFAULT_ENV art-env
-
-# COPY ../toDocker/env-deps ${HOME_DIR}/install/env-deps
-# SHELL ["conda", "run", "-n", "art-env", "/bin/bash", "-c"]
-# RUN pip --no-cache-dir -q install ${HOME_DIR}/install/env-deps/torch-2.0.1+cu118-cp310-cp310-linux_x86_64.whl -U && \
-#     pip --no-cache-dir -q install ${HOME_DIR}/install/env-deps/torchvision-0.15.2+cu118-cp310-cp310-linux_x86_64.whl -U && \
-#     pip --no-cache-dir -q install ${HOME_DIR}/install/env-deps/flash_attn-1.0.1-cp310-cp310-linux_x86_64.whl -U && \
-#     pip --no-cache-dir -q install -r ${HOME_DIR}/install/pip-reqs/requirements-all.txt && \
-#     apt-get install -y python3-tk && \
-#     apt-get clean && \
-#     rm -rf ${HOME_DIR}/install/env-deps/
-
-
-# EXPOSE 1991
-
-# CMD [ "/bin/bash" ]
 
 # tar -czvf kand-app.tar.gz -C /home/popkov-mi/miniconda3/envs kand-app
 # tar -czvf app.tar.gz -C /home/popkov-mi/kand-app/v1/ app

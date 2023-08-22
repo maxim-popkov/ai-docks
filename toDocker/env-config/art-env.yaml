@@ -9,6 +9,7 @@ dependencies:
   - ipython
   - ipykernel
   - jupyter
+  - scikit-learn
   - numpy=1.23
   - tk
 
