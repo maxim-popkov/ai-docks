@@ -16,6 +16,10 @@ aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/Xpu
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors -d ${COMFY_HOME}/models/checkpoints -o sd_xl_base_1.0.safetensors
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors -d ${COMFY_HOME}/models/checkpoints -o sd_xl_refiner_1.0.safetensors
 
+# sdxl cnet
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/diffusers/controlnet-canny-sdxl-1.0/resolve/main/diffusion_pytorch_model.fp16.safetensors -d ${COMFY_HOME}/models/controlnet -o sdxl_canny.safetensors
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/diffusers/controlnet-depth-sdxl-1.0/resolve/main/diffusion_pytorch_model.fp16.safetensors -d ${COMFY_HOME}/models/controlnet -o sdxl_depth.safetensors
+
 #nmkd upscaler
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M  "https://nmkd.de/shared/ESRGAN/Models/Realistic%2C%20Multipurpose/4x_NMKD-Superscale-SP_178000_G.pth"
 

@@ -41,7 +41,7 @@ ln -s ${CN_ANNOTATOR} ${SD_HOME}/extensions/sd-webui-controlnet/annotator
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/XpucT/Deliberate/resolve/main/Deliberate_v2.safetensors -d ${SD_HOME}/models/Stable-diffusion -o Deliberate_v2.safetensors
 
 # roop
-pip install insightface==0.7.3
-git clone https://github.com/s0md3v/sd-webui-roop ${SD_HOME}/extensions/sd-webui-roop
+# pip install insightface==0.7.3
+# git clone https://github.com/s0md3v/sd-webui-roop ${SD_HOME}/extensions/sd-webui-roop
 
 python -c 'from launch import prepare_environment; prepare_environment()'
