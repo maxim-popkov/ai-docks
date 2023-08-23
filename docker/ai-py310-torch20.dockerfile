@@ -103,24 +103,9 @@ CMD [ "/bin/bash" ]
 #wsl --unregister docker-desktop-data
 #wsl --import docker-desktop-data "D:\docker\wsl\data" "D:\docker\wsl\data\docker-desktop-data.tar" --version 2
 
-# RUN apt-get update -y && \
-#     apt-get upgrade -y && \
-#     apt-get install -y libgoogle-perftools-dev && \
-#     apt-get install -y libgl1 libglib2.0-0 wget vim git git-lfs python3-pip python-is-python3 && \
-#     apt-get install -y --no-install-recommends aria2 && \
-#     apt-get clean
 
-# RUN wget https://repo.anaconda.com/miniconda/Miniconda3-py310_23.3.1-0-Linux-x86_64.sh -O miniconda.sh && \
-#     chmod +x miniconda.sh && \
-#     ./miniconda.sh -b -p ~/miniconda && \
-#     eval "$(~/miniconda/bin/conda shell.bash hook)" && \
-#     /bin/bash -c "source ~/miniconda/bin/activate" && 
-
-# CMD [ "/bin/bash" ]
-
-
-# docker build -t skifmax/art-base:py310-torch201-v3 -f .\docker\ai-py310-torch20.dockerfile .
-# docker push skifmax/art-base:py310-torch201-v1 
+# docker build -t skifmax/art-base:py310-torch201-v4 -f .\docker\ai-py310-torch20.dockerfile .
+# docker push skifmax/art-base:py310-torch201-v4 
 # #docker build -t sd-app -f .\Dockerfile.app .
 # docker run -it --rm skifmax/kand-app:v1.0 /bin/bash
 # docker build -t skifmax/kand-app:v1.0 -f .\Dockerfile.base-cuda11-pth20 .
