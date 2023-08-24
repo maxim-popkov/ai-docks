@@ -12,4 +12,5 @@ dependencies:
   - scikit-learn
   - numpy=1.23
   - tk
+  - cudatoolkit
 

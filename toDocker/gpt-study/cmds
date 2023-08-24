@@ -1,4 +1,24 @@
+export LD_LIBRARY_PATH=/home/popkov-mi/miniconda3/envs/art-env/lib:$LD_LIBRARY_PATH
+echo 'export LD_LIBRARY_PATH=/usr/local/cuda-11.4/targets/x86_64-linux/lib:/home/popkov-mi/miniconda3/envs/art-env/lib:$LD_LIBRARY_PATH' >> /home/popkov-mi/.bashrc
+
 pip install auto-gptq
 
 mkdir study && cd study
-jupyter notebook --ip=0.0.0.0 --port=1991
+jupyter notebook --ip=0.0.0.0 --port=1991 --NotebookApp.token=''
+
+git clone --branch gptq-3bit--1g-actorder_True https://huggingface.co/TheBloke/vicuna-33B-GPTQ
+git clone --branch gptq-3bit-128g-actorder_False https://huggingface.co/TheBloke/vicuna-33B-GPTQ
+
+gptq-3bit-128g-actorder_False
+gptq-3bit--1g-actorder_True
+
+
+
+
+/usr/local/cuda-11.4/targets/x86_64-linux/lib
+
+export LD_LIBRARY_PATH=/usr/local/cuda-11.4/targets/x86_64-linux/lib:$LD_LIBRARY_PATH
+
+export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
+
+conda install cudatoolkit
