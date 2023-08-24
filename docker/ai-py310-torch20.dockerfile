@@ -55,6 +55,7 @@ RUN echo ". ${MINICONDA_HOME}/etc/profile.d/conda.sh" >> ${HOME_DIR}/.bashrc && 
     ${MINICONDA_HOME}/bin/conda clean -afy && \
     conda update conda && \
     mamba env create --name ${CONDA_ART_ENV} -f ${HOME_DIR}/install/env-config/art-env.yaml && \
+    echo "export LD_LIBRARY_PATH=${MINICONDA_HOME}/envs/${CONDA_ART_ENV}/lib:$LD_LIBRARY_PATH" >> /home/popkov-mi/.bashrc && \
     conda init bash && \
     echo "conda activate ${CONDA_ART_ENV}" >> ${HOME_DIR}/.bashrc
 
