@@ -15,7 +15,7 @@ echo 'export LD_LIBRARY_PATH=/usr/local/cuda-11.4/targets/x86_64-linux/lib:/usr/
 ln -sf /home/popkov-mi/miniconda3/envs/art-env/lib/libstdc++.so.6 /usr/lib/x86_64-linux-gnu/libstdc++.so.6
 
 # Устанавливаем cudatoolkit
-conda install cudatoolkit
+conda install -y cudatoolkit
 
 # Создаем файл .env и добавляем переменные окружения
 cat <<EOL > /home/popkov-mi/.env

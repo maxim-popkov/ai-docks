@@ -9,9 +9,20 @@ jupyter notebook --ip=0.0.0.0 --port=1991 --NotebookApp.token=''
 git clone --branch gptq-3bit--1g-actorder_True https://huggingface.co/TheBloke/vicuna-33B-GPTQ
 git clone --branch gptq-3bit-128g-actorder_False https://huggingface.co/TheBloke/vicuna-33B-GPTQ
 
+
+git clone --single-branch --branch gptq-4bit-32g-actorder_True https://huggingface.co/TheBloke/CodeLlama-34B-Instruct-GPTQ
+
+git clone --single-branch --branch gptq-8bit-128g-actorder_True https://huggingface.co/TheBloke/CodeLlama-13B-Instruct-GPTQ
+
+gptq-8bit-128g-actorder_True	
+
 gptq-3bit-128g-actorder_False
 gptq-3bit--1g-actorder_True
 
+
+
+
+git clone https://github.com/OpenTalker/SadTalker.git ${SD_HOME}/extensions/sad-talker
 
 
 
@@ -21,4 +32,14 @@ export LD_LIBRARY_PATH=/usr/local/cuda-11.4/targets/x86_64-linux/lib:$LD_LIBRARY
 
 export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
 
+export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
+
 conda install cudatoolkit
+
+
+# /usr/lib/x86_64-linux-gnu/libstdc++.so.6:
+rm /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+cp /home/popkov-mi/miniconda3/envs/art-env/lib/libstdc++.so.6 /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+
+# text = "### Instruction:\n Отказ - это когда клиент отказывается от предложения менеджера или дальнейшего разговора. Проанализируй и определи, есть ли отказ. Если есть, объясни, почему \n### Input:\n Клиент: Привет. Менеджер: Добрый день! Хотели бы вы рассмотреть наши новые предложения по кредитованию? Клиент: Сейчас не актуально для меня. \n### Ответ:"
+# text = "### Инструкция:\n Отказ - это когда клиент отказывается от предложения менеджера или дальнейшего разговора. Проанализируй и определи, есть ли отказ. Если есть, объясни, почему \n### Диалог:\n Клиент: Привет. Менеджер: Добрый день! Хотели бы вы рассмотреть наши новые предложения по кредитованию? Клиент: Сейчас не актуально для меня. \n### Ответ:"
