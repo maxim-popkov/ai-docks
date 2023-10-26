@@ -23,5 +23,6 @@ aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/Xpu
 #nmkd upscaler
 # aria2c --console-log-level=error -c -x 16 -s 16 -k 1M  "https://nmkd.de/shared/ESRGAN/Models/Realistic%2C%20Multipurpose/4x_NMKD-Superscale-SP_178000_G.pth"  -d ${COMFY_HOME}/models/upscale_models/ -o 4x_NMKD-Superscale-SP_178000_G.pth
 
+# python main.py --listen --port 1991
 # python ${COMFY_HOME}/main.py --listen --port 1991
 #python ${COMFY_HOME}/main.py --dont-print-server
