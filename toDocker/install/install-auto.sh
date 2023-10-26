@@ -16,13 +16,16 @@ git clone https://github.com/AlUlkesh/stable-diffusion-webui-images-browser ${SD
 # git clone https://github.com/camenduru/sd-civitai-browser ${SD_HOME}/extensions/sd-civitai-browser
 git clone https://github.com/Mikubill/sd-webui-controlnet ${SD_HOME}/extensions/sd-webui-controlnet
 git clone https://github.com/fkunn1326/openpose-editor ${SD_HOME}/extensions/openpose-editor
-git clone https://github.com/camenduru/a1111-sd-webui-locon ${SD_HOME}/extensions/a1111-sd-webui-locon
+# git clone https://github.com/camenduru/a1111-sd-webui-locon ${SD_HOME}/extensions/a1111-sd-webui-locon
 git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui-rembg ${SD_HOME}/extensions/stable-diffusion-webui-rembg
 git clone https://github.com/ashen-sensored/stable-diffusion-webui-two-shot ${SD_HOME}/extensions/stable-diffusion-webui-two-shot
 git clone https://github.com/thomasasfk/sd-webui-aspect-ratio-helper ${SD_HOME}/extensions/sd-webui-aspect-ratio-helper
 
-git clone https://github.com/Iyashinouta/sd-model-downloader ${SD_HOME}/extensions/sd-model-downloader
+# git clone https://github.com/Iyashinouta/sd-model-downloader ${SD_HOME}/extensions/sd-model-downloader
 git clone https://github.com/missionfloyd/webui-qrcode-generator ${SD_HOME}/extensions/webui-qrcode-generator
+
+# depthlib
+git clone https://github.com/jexom/sd-webui-depth-lib ${SD_HOME}/extensions/sd-webui-depth-lib
 
 cd ${SD_HOME}
 
