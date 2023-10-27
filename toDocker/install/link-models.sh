@@ -9,5 +9,5 @@ ln -sf ${CNXL_MODELS}/sdxl_canny.safetensors ${COMFY_HOME}/models/controlnet/sdx
 ln -sf ${CNXL_MODELS}/sdxl_depth.safetensors ${COMFY_HOME}/models/controlnet/sdxl_depth.safetensors
 
 # SDXL CNET Auto111
-ln -sf ${CNXL_MODELS}/sdxl_canny.safetensors ${SD_HOME}/extensions/sd-webui-controlnet/models/sdxl_canny.safetensors
-ln -sf ${CNXL_MODELS}/sdxl_depth.safetensors ${SD_HOME}/extensions/sd-webui-controlnet/models/sdxl_depth.safetensors
+ln -sf ${CNXL_MODELS}/sdxl_canny.safetensors ${CN_MODELS}/sdxl_canny.safetensors
+ln -sf ${CNXL_MODELS}/sdxl_depth.safetensors ${CN_MODELS}/sdxl_depth.safetensors
