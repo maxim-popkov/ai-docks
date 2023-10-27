@@ -6,8 +6,14 @@
 SD_HOME="/home/popkov-mi/sd-app/v1/auto"
 SD_MODELS="/home/popkov-mi/sd-app/sd15-models"
 CN_MODELS="/home/popkov-mi/sd-app/cn15-models"
+CNXL_MODELS="/home/popkov-mi/sd-app/cnxl-models"
 CN_ANNOTATOR="/home/popkov-mi/sd-app/cn-annotator"
 COMFY_HOME="/home/popkov-mi/comfy-app"
+
+# TODO
+### Перенести логику создания папок 
+mkdir -p ${CNXL_MODELS}
+# 
 
 # Добавляем пути к LD_LIBRARY_PATH
 echo 'export LD_LIBRARY_PATH=/usr/local/cuda-11.4/targets/x86_64-linux/lib:/usr/lib/x86_64-linux-gnu:/home/popkov-mi/miniconda3/envs/art-env/lib:$LD_LIBRARY_PATH' >> /home/popkov-mi/.bashrc
@@ -23,6 +29,7 @@ cat <<EOL > /home/popkov-mi/.env
 SD_HOME=$SD_HOME
 SD_MODELS=$SD_MODELS
 CN_MODELS=$CN_MODELS
+CNXL_MODELS=$CNXL_MODELS
 CN_ANNOTATOR=$CN_ANNOTATOR
 COMFY_HOME=$COMFY_HOME
 EOL
