@@ -14,9 +14,9 @@ git clone https://github.com/SeargeDP/SeargeSDXL.git ${COMFY_HOME}/custom_nodes/
 
 
 pip install -q -r ${COMFY_HOME}/requirements.txt
-pip install -q timm==0.6.7
 pip install -r ${COMFY_HOME}/custom_nodes/comfyui_controlnet_aux/requirements.txt
 pip install -r ${COMFY_HOME}/custom_nodes/was-node-suite-comfyui/requirements.txt
+pip install -q timm==0.6.7
 
 # deliberate
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/XpucT/Deliberate/resolve/main/Deliberate_v2.safetensors -d ${COMFY_HOME}/models/checkpoints -o Deliberate_v2.safetensors
