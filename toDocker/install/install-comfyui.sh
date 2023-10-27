@@ -1,5 +1,4 @@
 source .env
-COMFY_HOME="/home/popkov-mi/comfy-app"
 
 #apt-get -y install build-essential cmake
 conda activate art-env
