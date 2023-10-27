@@ -6,6 +6,7 @@ git clone https://github.com/comfyanonymous/ComfyUI.git ${COMFY_HOME}
 git clone https://github.com/Fannovel16/comfy_controlnet_preprocessors ${COMFY_HOME}/custom_nodes/comfy_controlnet_preprocessors 
 
 pip install -q -r ${COMFY_HOME}/requirements.txt
+pip install -q timm==0.6.7
 python ${COMFY_HOME}/custom_nodes/comfy_controlnet_preprocessors/install.py --no_download_ckpts
 
 # deliberate
