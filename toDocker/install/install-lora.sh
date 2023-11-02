@@ -1,6 +1,6 @@
 #!/bin/bash
 source .env
-conda activate art-env
+conda activate lora15-env
 
 LORA_TRAINER="/home/popkov-mi/lora-trainer"
 COMMIT="9a67e0df390033a89f17e70df5131393692c2a55"
