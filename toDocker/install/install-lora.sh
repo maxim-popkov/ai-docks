@@ -11,8 +11,9 @@ git reset --hard ${COMMIT}
 
 wget https://raw.githubusercontent.com/hollowstrawberry/kohya-colab/xformers-fix/requirements.txt -q -O requirements.txt
 
-pip install --upgrade -r requirements.txt
-pip install xformers==0.0.22.post4 --index-url https://download.pytorch.org/whl/cu118
+pip install --upgrade -r -q requirements.txt
+pip install -q xformers==0.0.22.post4 --index-url https://download.pytorch.org/whl/cu118
+pip install -q torchvision
 
 
 sed -i "s@cpu@cuda@" library/model_util.py
