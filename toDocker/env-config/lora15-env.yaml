@@ -1,0 +1,16 @@
+name: lora15-env
+channels:
+  - pytorch
+  - defaults
+  - anaconda
+dependencies:
+  - python=3.10
+  - pip=23.0
+  - ipython
+  - ipykernel
+  - jupyter
+  - scikit-learn
+  - numpy
+  - pandas
+  - tk
+  - cudatoolkit
