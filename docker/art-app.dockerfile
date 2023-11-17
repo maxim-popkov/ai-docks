@@ -15,6 +15,7 @@ USER root
 COPY ./toDocker/setup/.env ${HOME_DIR}/
 COPY ./toDocker/setup/*.sh ${HOME_DIR}/
 
+SHELL ["conda", "run", "-n", "art-env", "/bin/bash", "-c"]
 # Запускаем скрипты
 RUN chmod +x ${HOME_DIR}/*.sh
 RUN ${HOME_DIR}/setup_environment.sh
