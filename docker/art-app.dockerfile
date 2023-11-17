@@ -17,10 +17,13 @@ COPY ./toDocker/setup/*.sh ${HOME_DIR}/
 
 SHELL ["conda", "run", "-n", "art-env", "/bin/bash", "-c"]
 # Запускаем скрипты
-RUN chmod +x ${HOME_DIR}/*.sh
-RUN ${HOME_DIR}/setup_environment.sh
-RUN ${HOME_DIR}/create_directories.sh
+RUN mv ${HOME_DIR}/onstart.sh /root/onstart.sh && \
+    chmod +x ${HOME_DIR}/*.sh && \
+    ${HOME_DIR}/setup_environment.sh && \
+    ${HOME_DIR}/create_directories.sh
 RUN ${HOME_DIR}/install_requirements.sh
+RUN ln -sf /home/popkov-mi/miniconda3/envs/art-env/lib/libstdc++.so.6 /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+
 
 WORKDIR ${HOME_DIR}
 
