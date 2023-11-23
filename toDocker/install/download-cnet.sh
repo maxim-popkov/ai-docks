@@ -1,3 +1,5 @@
+#!/bin/bash
+
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/embed/upscale/resolve/main/4x-UltraSharp.pth -d ${SD_HOME}/models/ESRGAN -o 4x-UltraSharp.pth
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/ControlNet-v1-1/resolve/main/control_v11e_sd15_ip2p_fp16.safetensors -d ${SD_HOME}/extensions/sd-webui-controlnet/models -o control_v11e_sd15_ip2p_fp16.safetensors
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/ControlNet-v1-1/resolve/main/control_v11e_sd15_shuffle_fp16.safetensors -d ${SD_HOME}/extensions/sd-webui-controlnet/models -o control_v11e_sd15_shuffle_fp16.safetensors
@@ -39,6 +41,9 @@ aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckp
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/ControlNet-v1-1/resolve/main/t2iadapter_depth_sd15v2.pth -d ${SD_HOME}/extensions/sd-webui-controlnet/models -o t2iadapter_depth_sd15v2.pth
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/ControlNet-v1-1/resolve/main/t2iadapter_sketch_sd15v2.pth -d ${SD_HOME}/extensions/sd-webui-controlnet/models -o t2iadapter_sketch_sd15v2.pth
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/ControlNet-v1-1/resolve/main/t2iadapter_zoedepth_sd15v1.pth -d ${SD_HOME}/extensions/sd-webui-controlnet/models -o t2iadapter_zoedepth_sd15v1.pth
+
+# IP-adapter
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter_sd15.safetensors -d ${SD_HOME}/extensions/sd-webui-controlnet/models -o ip-adapter_sd15.safetensors
 
 # QR
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M "https://civitai.com/api/download/models/122143?type=Model&format=SafeTensor" -d ${SD_HOME}/extensions/sd-webui-controlnet/models -o qrCodeMonster_v20.safetensors
