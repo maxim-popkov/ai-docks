@@ -20,6 +20,7 @@ git clone https://github.com/thomasasfk/sd-webui-aspect-ratio-helper ${SD_HOME}/
 # git clone https://github.com/Iyashinouta/sd-model-downloader ${SD_HOME}/extensions/sd-model-downloader
 git clone https://github.com/missionfloyd/webui-qrcode-generator ${SD_HOME}/extensions/webui-qrcode-generator
 
+
 # depthlib
 git clone https://github.com/jexom/sd-webui-depth-lib ${SD_HOME}/extensions/sd-webui-depth-lib
 
