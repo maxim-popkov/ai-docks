@@ -1,3 +1,4 @@
+#!/bin/bash
 source .env
 
 #apt-get -y install build-essential cmake
