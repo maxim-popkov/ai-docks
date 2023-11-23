@@ -1,7 +1,4 @@
-SD_HOME="/home/popkov-mi/sd-app/v1/auto"
-SD_MODELS="/home/popkov-mi/sd-app/sd15-models"
-CN_MODELS="/home/popkov-mi/sd-app/cn15-models"
-CN_ANNOTATOR="/home/popkov-mi/sd-app/cn-annotator"
+source .env
 
 conda activate art-env
 git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git ${SD_HOME}
@@ -10,7 +7,6 @@ git clone https://huggingface.co/embed/negative ${SD_HOME}/embeddings/negative
 git clone https://huggingface.co/embed/lora ${SD_HOME}/models/Lora/positive
 
 
-# git clone https://github.com/camenduru/stable-diffusion-webui-images-browser ${SD_HOME}/extensions/stable-diffusion-webui-images-browser
 git clone https://github.com/AlUlkesh/stable-diffusion-webui-images-browser ${SD_HOME}/extensions/stable-diffusion-webui-images-browser
 # git clone https://github.com/camenduru/stable-diffusion-webui-huggingface ${SD_HOME}/extensions/stable-diffusion-webui-huggingface
 # git clone https://github.com/camenduru/sd-civitai-browser ${SD_HOME}/extensions/sd-civitai-browser

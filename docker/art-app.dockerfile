@@ -22,8 +22,6 @@ RUN mv ${HOME_DIR}/onstart.sh /root/onstart.sh && \
     ${HOME_DIR}/setup_environment.sh && \
     ${HOME_DIR}/create_directories.sh
 RUN ${HOME_DIR}/install_requirements.sh
-RUN ln -sf /home/popkov-mi/miniconda3/envs/art-env/lib/libstdc++.so.6 /usr/lib/x86_64-linux-gnu/libstdc++.so.6
-
 
 WORKDIR ${HOME_DIR}
 
