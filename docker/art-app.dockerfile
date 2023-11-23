@@ -8,15 +8,15 @@ ENV MINICONDA_HOME ${HOME_DIR}/miniconda3
 ENV CONDA_ART_ENV art-env
 ENV PATH ${MINICONDA_HOME}/bin:$PATH
 
-# Установка как root
+# Switch to root
 USER root
 
-# Копируем .env файл и скрипты в контейнер
+# Copy .env and scripts to container
 COPY ./toDocker/setup/.env ${HOME_DIR}/
 COPY ./toDocker/setup/*.sh ${HOME_DIR}/
 
 SHELL ["conda", "run", "-n", "art-env", "/bin/bash", "-c"]
-# Запускаем скрипты
+# Run scripts
 RUN mv ${HOME_DIR}/onstart.sh /root/onstart.sh && \
     chmod +x ${HOME_DIR}/*.sh && \
     ${HOME_DIR}/setup_environment.sh && \

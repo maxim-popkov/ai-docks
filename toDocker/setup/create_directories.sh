@@ -12,6 +12,7 @@ create_directory() {
 create_directory /home/popkov-mi/.cache
 create_directory /home/popkov-mi/miniconda3/envs/art-env
 create_directory /home/popkov-mi/sd-app/v1/auto
+create_directory /home/popkov-mi/sd-app/v2/auto
 create_directory /home/popkov-mi/.config
 create_directory /home/popkov-mi/.insightface
 create_directory /home/popkov-mi/.keras
