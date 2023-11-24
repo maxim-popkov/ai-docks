@@ -17,3 +17,7 @@ ln -sf ${SVD_MODELS}/svd_image_decoder.safetensors ${COMFY_HOME}/models/svd/svd_
 ln -sf ${SVD_MODELS}/svd_xt.safetensors ${COMFY_HOME}/models/svd/svd_xt.safetensors
 ln -sf ${SVD_MODELS}/svd_xt_image_decoder.safetensors ${COMFY_HOME}/models/svd/svd_xt_image_decoder.safetensors
 
+ln -sf ${SVD_MODELS}/svd.safetensors ${COMFY_HOME}/models/checkpoints/svd.safetensors
+
+# SVD_MODELS="/home/popkov-mi/sd-app/sdv-models"
+# ln -sf ${SVD_MODELS}/svd.safetensors ${COMFY_HOME}/models/checkpoints/svd.safetensors
