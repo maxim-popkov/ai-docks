@@ -1,7 +1,7 @@
 #!/bin/bash
 source .env
 
-SVD_MODELS="/home/popkov-mi/sd-app/sdv-models"
+SVD_MODELS="/home/popkov-mi/sd-app/svd-models"
 
 mkdir -p ${SVD_MODELS}
 
