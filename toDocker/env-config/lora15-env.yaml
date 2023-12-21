@@ -15,3 +15,5 @@ dependencies:
   - seaborn
   - tk
   - cudatoolkit
+
+# conda env create --name lora15-env -f lora15-env.yaml

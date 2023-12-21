@@ -14,3 +14,4 @@ dependencies:
   - tk
   - cudatoolkit
 
+# conda env create --name envname --file=environments.yml
