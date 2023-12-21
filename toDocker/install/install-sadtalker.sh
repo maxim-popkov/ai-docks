@@ -14,7 +14,7 @@ wget -nc https://github.com/Winfredy/SadTalker/releases/download/v0.0.2/auido2po
 wget -nc https://github.com/Winfredy/SadTalker/releases/download/v0.0.2/epoch_20.pth -O ${SAD_HOME}/checkpoints/epoch_20.pth
 wget -nc https://github.com/Winfredy/SadTalker/releases/download/v0.0.2/facevid2vid_00189-model.pth.tar -O ${SAD_HOME}/checkpoints/facevid2vid_00189-model.pth.tar
 wget -nc https://github.com/Winfredy/SadTalker/releases/download/v0.0.2/shape_predictor_68_face_landmarks.dat -O ${SAD_HOME}/checkpoints/shape_predictor_68_face_landmarks.dat
-wget -nc https://github.com/Winfredy/SadTalker/releases/download/v0.0.2/wav2lip.pth -O ./checkpoints/wav2lip.pth
+wget -nc https://github.com/Winfredy/SadTalker/releases/download/v0.0.2/wav2lip.pth -O ${SAD_HOME}/checkpoints/wav2lip.pth
 wget -nc https://github.com/OpenTalker/SadTalker/releases/download/v0.0.2-rc/mapping_00109-model.pth.tar -O  ${SAD_HOME}/checkpoints/mapping_00109-model.pth.tar
 wget -nc https://github.com/OpenTalker/SadTalker/releases/download/v0.0.2-rc/mapping_00229-model.pth.tar -O  ${SAD_HOME}/checkpoints/mapping_00229-model.pth.tar
 wget -nc https://github.com/OpenTalker/SadTalker/releases/download/v0.0.2-rc/SadTalker_V0.0.2_256.safetensors -O  ${SAD_HOME}/checkpoints/SadTalker_V0.0.2_256.safetensors
