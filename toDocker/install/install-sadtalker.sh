@@ -8,7 +8,7 @@ git clone https://github.com/Winfredy/SadTalker ${SD_HOME}/extensions/SadTalker
 # vi ${SD_HOME}/extensions/SadTalker/download_models.sh
 # cd ${SD_HOME}/extensions/SadTalker
 # chmod +x ${SD_HOME}/extensions/SadTalker/download_models.sh
-
+mkdir ${SAD_HOME}/checkpoints 
 wget -nc https://github.com/Winfredy/SadTalker/releases/download/v0.0.2/auido2exp_00300-model.pth -O ${SAD_HOME}/checkpoints/auido2exp_00300-model.pth
 wget -nc https://github.com/Winfredy/SadTalker/releases/download/v0.0.2/auido2pose_00140-model.pth -O ${SAD_HOME}/checkpoints/auido2pose_00140-model.pth
 wget -nc https://github.com/Winfredy/SadTalker/releases/download/v0.0.2/epoch_20.pth -O ${SAD_HOME}/checkpoints/epoch_20.pth
