@@ -1,7 +1,5 @@
-# mkdir /home/popkov-mi/sd-app/sd15-models/SadTalker
-# cd /home/popkov-mi/sd-app/sd15-models/SadTalker
-# bash <(wget -qO- https://raw.githubusercontent.com/Winfredy/SadTalker/main/scripts/download_models.sh)
-
+#!/bin/bash
+source .env
 SAD_HOME=${SD_HOME}/extensions/SadTalker
 
 conda install -y ffmpeg
